@@ -18,7 +18,8 @@ $(function () {
     
     $.connection.hub.start().done(function () {
         chat.server.updateChatHistory();
-        $('#sendmessage').click(function () {
+        $('#send-message').submit(function (event) {
+            event.preventDefault();
             chat.server.send($('#displayname').val(), $('#message').val());
             $('#message').val('').focus();
         });
