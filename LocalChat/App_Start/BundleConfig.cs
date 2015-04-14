@@ -19,6 +19,9 @@ namespace LocalChat.App_Start
             bundles.Add(new StyleBundle("~/bundles/styles/global").Include(
                 "~/assets/bootstrap/css/bootstrap.css",
                 "~/assets/css/global/all.css"));
+
+            bundles.Add(new StyleBundle("~/bundles/styles/areas/chat").Include(
+                "~/assets/css/areas/chat.css"));
         }
     }
 

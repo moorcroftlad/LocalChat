@@ -1,0 +1,18 @@
+#discussion {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 992px) {
+    #discussion {
+        height:500px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    
+}

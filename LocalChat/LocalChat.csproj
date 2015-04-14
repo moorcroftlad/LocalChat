@@ -120,6 +120,7 @@
     <Content Include="assets\bootstrap\js\bootstrap.js" />
     <Content Include="assets\bootstrap\js\bootstrap.min.js" />
     <Content Include="assets\bootstrap\js\npm.js" />
+    <Content Include="assets\css\areas\chat.css" />
     <Content Include="assets\css\global\all.css" />
     <Content Include="assets\css\lib\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="assets\css\lib\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
