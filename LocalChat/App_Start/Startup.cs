@@ -1,9 +1,9 @@
-using LocalChat.SignalR;
+using LocalChat.App_Start;
 using Microsoft.Owin;
 using Owin;
 
 [assembly: OwinStartup(typeof(Startup))]
-namespace LocalChat.SignalR
+namespace LocalChat.App_Start
 {
     public class Startup
     {

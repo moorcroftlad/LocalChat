@@ -2,14 +2,14 @@ $(function () {
     var chat = $.connection.chatHub;
 
     chat.client.broadcastMessage = function (name, message) {
-        var encodedName = $('<div />').text(name).html();
-        var encodedMsg = $('<div />').text(message).html();
-        $('#discussion').append('<li><strong>' + encodedName + '</strong>:&nbsp;&nbsp;' + encodedMsg + '</li>');
+        var chatMessage = retrieveChatMessage(name, message);
+        $('#discussion').append(chatMessage);
     };
     
     chat.client.updateChatHistory = function (messages) {
-        $.each(messages, function(key, message) {
-            $('#discussion').append('<li><strong>' + message.Username + '</strong>:&nbsp;&nbsp;' + message.Message + '</li>');
+        $.each(messages, function (key, message) {
+            var chatMessage = retrieveChatMessage(message.Username, message.Message);
+            $('#discussion').append(chatMessage);
         });
     };
     
@@ -24,3 +24,15 @@ $(function () {
         });
     });
 });
+
+function retrieveChatMessage(name, message) {
+    var encodedName = $('<div />').text(name).html(),
+        encodedMessage = $('<div />').text(message).html(),
+        source = $("#message-template").html(),
+        template = Handlebars.compile(source),
+        context = {
+            message: encodedMessage,
+            name: encodedName
+        };
+    return $(template(context));
+}

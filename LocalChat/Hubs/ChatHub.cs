@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Web;
 using Microsoft.AspNet.SignalR;
 
-namespace LocalChat.SignalR
+namespace LocalChat.Hubs
 {
     public class ChatHub : Hub
     {

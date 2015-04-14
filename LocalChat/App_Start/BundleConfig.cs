@@ -10,6 +10,7 @@ namespace LocalChat.App_Start
             bundles.Add(new ScriptBundle("~/bundles/scripts/global") {Orderer = new NonOrderingBundleOrderer()}.Include(
                 "~/assets/js/lib/jquery.min.js",
                 "~/assets/js/lib/jquery.signalR-2.2.0.min.js",
+                "~/assets/js/lib/handlebars-v2.0.0.js",
                 "~/assets/js/shared/pubSub.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/scripts/chat").Include(

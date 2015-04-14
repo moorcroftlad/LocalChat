@@ -1,13 +1,27 @@
 ﻿<div class="container">
+    <div class="row">
+        <div class="col-xs-12" id="discussion">
+            <script id="message-template" type="text/x-handlebars-template">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 name">
+                        {{name}}
+                    </div>
+                    <div class="col-xs-12 col-sm-9 message">
+                        {{message}}
+                    </div>
+                </div>
+            </script>
+        </div>
+    </div>
+
     <input type="text" id="message" />
     <input type="button" id="sendmessage" value="Send" />
     <input type="hidden" id="displayname" />
-    <ul id="discussion">
-        
-    </ul>
 </div>
+
+
 
 @section pageScripts{
     <script src="signalr/hubs"></script>
-    @Scripts.Render("~/bundles/scripts/chat")
+    @Scripts.Render("~/bundles/scripts/chat")   
 }
